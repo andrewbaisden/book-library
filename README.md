@@ -1,6 +1,6 @@
 # Book Library
 
-![Book Library](https://res.cloudinary.com/d74fh3kw/image/upload/v1597257991/Screenshot_2020-08-12_at_19.46.02_e22dr9.png 'Book Library')
+![Book Library](https://res.cloudinary.com/d74fh3kw/image/upload/v1597259350/books_home_sb9d3s.png 'Book Library')
 
 ## Installation
 
