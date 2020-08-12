@@ -1,9 +1,12 @@
 import React, { Fragment } from 'react';
+import Nav from '../components/Nav';
 
 const Home = () => {
 	return (
 		<Fragment>
-			<h1>Book Library Home Page</h1>
+			<main>
+				<Nav />
+			</main>
 		</Fragment>
 	);
 };

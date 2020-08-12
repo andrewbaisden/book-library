@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;500;600;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Encode Sans Condensed', sans-serif;
+	color: #333333;
+}
+
+main {
+	max-width: 120rem;
+	width: 100%;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+nav {
+	display: flex;
+	justify-content: start;
+	margin-bottom: 4rem;
+	align-items: flex-end;
+}
+
+nav a {
+	margin-right: 2rem;
+	text-decoration: none;
+	color: #333333;
+	font-weight: 500;
+}
+
+.logo {
+	color: #333333;
+	font-size: 3rem;
+}
+
+.logo::after {
+	content: '';
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	background: #f2a517;
+	border-radius: 100%;
+	position: relative;
+	top: -1rem;
+}
+
+.logo::before {
+	content: 'a terraform company';
+	display: block;
+	width: 10rem;
+	height: 2rem;
+	position: relative;
+	top: 5.5rem;
+	left: 2rem;
+	font-size: 1.2rem;
+}
+
+.library-heading {
+	border-bottom: 0.1rem solid rgb(236, 236, 236);
+}
+
+.library-heading h1 {
+	font-size: 5rem;
+}
+
+.library-heading h2 {
+	font-weight: 700;
+	margin: 2rem 0 2rem 0;
+}
+
+.library-book {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 2rem 0 2rem 0;
+	border-bottom: 0.1rem solid rgb(236, 236, 236);
+}
+
+.library-book img {
+	width: 15rem;
+	margin-right: 2rem;
+}
+
+.library-book-content {
+	max-width: 80rem;
+	width: 100%;
+}
+
+.library-book-content a {
+	text-decoration: none;
+}
+
+.library-book-content h1 {
+	font-size: 2rem;
+	color: #333333;
+	font-weight: 600;
+}
+
+.library-book-content p {
+	margin: 1rem 0 1rem 0;
+}
+
+.library-book-listen {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-evenly;
+	margin: 2rem 0 2rem 0;
+}
+
+.btn-listen {
+	background: #f1a517;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	cursor: pointer;
+	margin: 1rem 0 1rem 0;
+}
+
+.btn-download {
+	background: #e6e6e6;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	cursor: pointer;
+	margin: 1rem 0 1rem 0;
+}
+
+@media screen and (max-width: 960px) {
+	.library-book {
+		justify-content: center;
+		align-items: center;
+	}
+	.library-book-content {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+	}
+}

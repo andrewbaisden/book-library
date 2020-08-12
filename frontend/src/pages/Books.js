@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import Nav from '../components/Nav';
 
 const Books = () => {
 	useEffect(() => {
@@ -33,26 +34,44 @@ const Books = () => {
 	return (
 		<Router>
 			<Fragment>
-				<h1>Books</h1>
-				<div>
-					{loading === false ? (
-						<div>
-							<h1>Loading...</h1>
-						</div>
-					) : (
-						<div>
-							{data.map((book) => (
-								<ul key={book.id}>
-									<li>
-										<Link onClick={refresh} to={`/books/${book.id}`}>
-											{book.book}
-										</Link>
-									</li>
-								</ul>
-							))}
-						</div>
-					)}
-				</div>
+				<main>
+					<Nav />
+					<div className="library-heading">
+						<h1>Library</h1>
+						<h2>Titles</h2>
+					</div>
+					<div className="library-container">
+						{loading === false ? (
+							<div>
+								<h1>Loading...</h1>
+							</div>
+						) : (
+							<div className="library-book-container">
+								{data.map((book) => (
+									<div key={book.id} className="library-book">
+										<div className="library-book-img">
+											<Link onClick={refresh} to={`/books/${book.id}`}>
+												<img src={book.img} alt={book.name} />
+											</Link>
+										</div>
+										<div className="library-book-content">
+											<Link onClick={refresh} to={`/books/${book.id}`}>
+												<h1>{book.name}</h1>
+											</Link>
+											<p>Author: {book.author}</p>
+											<p>Narrated by: {book.narrated}</p>
+										</div>
+										<div className="library-book-listen">
+											<p>{book.bookLength}</p>
+											<button className="btn-listen">Listen now</button>
+											<button className="btn-download">Download</button>
+										</div>
+									</div>
+								))}
+							</div>
+						)}
+					</div>
+				</main>
 			</Fragment>
 		</Router>
 	);
