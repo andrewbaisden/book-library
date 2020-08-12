@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@1,700&display=swap');
 
 * {
 	padding: 0;
@@ -64,6 +65,53 @@ nav a {
 	font-size: 1.2rem;
 }
 
+.hero {
+	width: 100%;
+	background: #333333;
+	height: 40rem;
+	text-align: center;
+	color: #ffffff;
+	padding: 5rem;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero h2,
+.hero p {
+	text-transform: uppercase;
+	font-family: 'Philosopher', sans-serif;
+}
+
+.hero p {
+	font-size: 9rem;
+}
+
+.hero button,
+.banners button {
+	background: #f1a517;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	cursor: pointer;
+	margin: 1rem 0 1rem 0;
+}
+
+.banners {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	padding: 2rem;
+	grid-gap: 2rem;
+}
+
+.banners section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	background: #cccccc;
+	padding: 4rem;
+	grid-gap: 2rem;
+}
+
 .library-heading {
 	border-bottom: 0.1rem solid rgb(236, 236, 236);
 }
@@ -87,6 +135,7 @@ nav a {
 .library-book img {
 	width: 15rem;
 	margin-right: 2rem;
+	margin-bottom: 2rem;
 }
 
 .library-book-content {
@@ -134,6 +183,10 @@ nav a {
 }
 
 @media screen and (max-width: 960px) {
+	.banners {
+		grid-template-columns: 1fr;
+	}
+
 	.library-book {
 		justify-content: center;
 		align-items: center;
