@@ -21,13 +21,7 @@ exports.getBook = (req, res) => {
 };
 
 exports.postAddBook = (req, res) => {
-	const name = req.body.name;
-	const author = req.body.author;
-	const narrated = req.body.narrated;
-	const img = req.body.img;
-	const bookLength = req.body.bookLength;
-	const releaseDate = req.body.releaseDate;
-	const language = req.body.language;
+	const { name, author, narrated, img, bookLength, releaseDate, language } = req.body;
 
 	const book = new Books(null, name, author, narrated, img, bookLength, releaseDate, language);
 	book.save();
